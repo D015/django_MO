@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index page</title>
-</head>
-<body>
-    <h1>Hello world</h1>
+{% extends 'blog/base_blog.html' %}
 
-    <h3>Hello Django</h3>
 
-</body>
-</html>
+{% block title %}
+    Posts list
+{% endblock %}
+
+{% block content %}
+    <h1 class="md-5">Posts:</h1>
+        <p>
+            {{ name }}
+        </p>
+{% endblock %}
