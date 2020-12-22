@@ -5,6 +5,12 @@ from .models import Post
 
 def posts_list(request):
     posts = Post.objects.all()
+
+    # post = Post.objects.get(slug='new-slug')
+    # print(post)
+    # post.slug = 'new-post'
+    # post.save()
+
     return render(request, 'blog/index.html', context={'posts': posts})
 
 def post_detail(request, slug):
